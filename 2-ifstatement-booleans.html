@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>If Statements And Booleans</title>
+</head>
+<body>
+    <button onclick="coinFlip()">Coin-Flip</button>
+    <script>
+        /*
+        function coinFlip () { 
+            const numberRandom = Math.random();
+            let result = '';
+            
+            if (numberRandom <= 0.5) {
+                result = 'heads';
+            } else {
+                result = 'tails';
+            }       
+            let guess = 'heads';
+
+            if (guess === numberRandom) {
+                result = 'Correct!';
+            } else {
+                result = 'Wrong!';
+            }
+            console.log(result);
+        }
+        */
+///////////////////////////////// ÇÖZÜM /////////////////////////////////////
+
+    const randomNumber = Math.random();
+    const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+      const guess = 'heads';
+      console.log(guess === result ? 'You win!' : 'You lose!');
+
+///////////////////////////////// PROMPT İLE //////////////////////////////////
+        /*
+        function coinFlip() {
+            // Rastgele bir sayı üret
+            const numberRandom = Math.random();
+            let result = '';
+            
+            // Yazı veya tura belirle
+            if (numberRandom <= 0.5) {
+                result = 'heads';
+            } else {
+                result = 'tails';
+            }
+            
+            // Kullanıcıdan tahmin al
+            let guess = prompt("Guess 'heads' or 'tails':");
+            
+            // Sonucu kontrol et
+            if (guess === result) {
+                alert('Correct!');
+            } else {
+                alert('Wrong! It was ' + result);
+            }
+        }
+        */
+            
+    </script>
+    
+</body>
+</html>

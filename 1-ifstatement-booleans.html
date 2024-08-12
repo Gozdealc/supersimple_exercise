@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>If Statements</title>
+</head>
+<body>
+    <script>
+///////////////// LESSON 6 A-B-C //////////////////////
+      const hour = 23;
+        const name = 'Gözde';
+       //  && HER İKİSİ DOĞRU OLDUĞUNDA DOĞRU -VE OPERATÖRÜ
+        if (hour >=6 && hour <= 12) {
+            console.log(`Good morning ${name}!`);
+        }
+        else if (hour >= 13 && hour <= 17 ) {
+            console.log(`Good Afternoon ${name}!`);
+        } else {
+        console.log("Good Night " + name + "!");
+    }
+
+
+/////////////// LESSON 6 D-E-F ////////////////////////
+ // VEYA OPERATÖRÜ, BİRİ DOĞRUYSA DOĞRU ||
+ // && operatörü || operatöründen daha yüksek önceliğe sahiptir.
+        const age = 70;
+        const isHoliday = true;
+
+        if ((age <=6 || age >= 65 ) && isHoliday) {
+            console.log('Discount');
+        } else {
+            console.log('No discount!');
+        }
+    </script>
+    
+</body>
+</html>

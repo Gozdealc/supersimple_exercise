@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+
+    <style>
+        .calculate-error {
+            color: red;
+        }
+        .calculate-button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+        }
+        .js-input {
+            height: 28px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" class="js-input">
+    <button class="calculate-button" onclick="
+    calculate();
+    ">Calculate</button>
+
+    <p class="calculate-error"></p>
+</body>
+<script>
+    function calculate() {
+        const input = document.querySelector('.js-input').value;
+
+        if (input < 0) {
+            document.querySelector('.calculate-error').textContent = 'Error: cost cannot be less than $0';
+        }
+    }
+</script>
+</html>

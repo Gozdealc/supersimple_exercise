@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Name" class="js-button" onkeydown="
+    if (event.key === 'Enter') {
+    updateText();
+    }
+    ">
+    <button onclick="
+        updateText();
+    ">Submit</button>
+    <p class="text-result"></p>
+
+    <!-- GİRİLEN DEĞERİ YAZDIRMA
+    <input type="text" class="input-text">
+    <button onclick="
+    const inputElement = document.querySelector('.input-text');
+    document.querySelector('.text-result')
+        .innerHTML = `Your name is: ${inputElement.value}`;
+    ">Submit</button>
+    <p class="text-result"></p> -->
+
+
+    <!-- HEADS AND TAILS 
+    <p>
+        <button onclick="
+            document.querySelector('.js-choice')
+                .innerHTML = 'You chose: heads';
+        ">Heads</button>
+
+        <button onclick="
+         document.querySelector('.js-choice')
+                .innerHTML = 'You chose: tails';
+        ">Tails</button>
+
+        <p class="js-choice"></p>
+    </p>     -->
+
+    <!-- <button class="button-9a">Hello - 9a</button>
+    <button class="button-9b" onclick="
+        changeText();
+    ">Hello - 9b</button> -->
+    <script>
+        /*
+        ////////////////  Etiketleriyle birlikte yazdırıyor. /////////////////////
+        console.log(document.querySelector('button'));
+
+        ////////////  Butonun içeriğini yazdırıyor. //////////////////////
+        console.log(document.querySelector('button').innerHTML);
+
+        //////////// Buton'a tıkladığımızda text değişiyor. ///////////////
+        function changeText () {
+            const buttonElement = document.querySelector('.button-9b');
+
+            if (buttonElement.innerHTML === 'Hello - 9b') {
+               buttonElement.innerHTML = '9b - Done';
+            } else {
+                buttonElement.innerHTML = 'Hello - 9b';
+            }
+        }
+
+        //// istediği çözümün kısa hali //////
+        document.querySelector('.button-9b')
+        .innerHTML = '9b done!';
+        */
+
+        function updateText () {
+            const inputElement = document.querySelector('.js-button');
+            document.querySelector('.text-result')
+           .innerHTML = `Your name is: ${inputElement.value}`;
+        }
+        
+    </script>
+</body>
+</html>

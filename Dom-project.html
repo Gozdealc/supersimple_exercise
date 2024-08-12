@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- SUPERSIMPLE COZUMU, BU KADAR YETERLI;
+    <input placeholder="Type something" class="js-input"
+      onkeyup="
+        const inputElement = document.querySelector('.js-input');
+        document.querySelector('.js-message')
+          .innerHTML = inputElement.value;
+      ">
+
+    <p class="js-message"></p> -->  
+
+
+    <input type="text" placeholder="Enter your message" class="js-input" onkeyup="
+          displayInput();
+    ">
+    <p class="js-output"></p>
+    
+    <!-- <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of Order" class="js-cost-input" onkeydown="
+      handleCostKeyDown(event);
+    ">
+    <button onclick="
+      calculateTotal();
+    ">Calculate</button>
+    <p class="js-total-cost"></p> -->
+    
+
+    <script>
+        function displayInput () {
+            // Input elemanını seç
+            const inputElement = document.querySelector('.js-input');
+            // Input elemanının değerini al.
+            const value = inputElement.value;
+            // Sonuç elemanını seç ve yazdıkça güncelle
+            const outputElement = document.querySelector('.js-output');
+            outputElement.textContent = `${value}`;   
+        }
+    /*
+    function handleCostKeyDown (event) {
+
+    if(event.key === 'Enter') {
+        calculateTotal();
+        }
+    }
+    /// NUMBER KULLANMALIYIZ, STRING OLARAK ALMAMASI ICIN ///
+    function calculateTotal () {
+        const inputElement = document.querySelector('.js-cost-input');
+        let cost =  Number(inputElement.value);
+
+        if (cost < 40 ) {
+        cost = cost + 10;
+        }
+
+        document.querySelector('.js-total-cost').innerHTML = `$${cost}` ;
+    }
+    */
+    </script>
+</body>
+</html>

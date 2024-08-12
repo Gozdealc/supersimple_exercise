@@ -1,0 +1,37 @@
+.cart_button {
+    background-color: #ffe76d;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 25px;
+    margin-bottom: 20px;
+}
+.request_button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-right: 8px;
+    margin-bottom: 20px;
+}
+.schedule_button {
+    background-color: rgb(230, 230, 230);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+      /* The word "toggle" means turn on/off. */
+      .toggle-button {
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }

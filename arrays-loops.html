@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arrays-Loops</title>
+</head>
+<body>
+    <script>
+        // const array1 = [1, 2, 3, 4, 5];
+        // array[4] = 99;
+        // console.log(array);
+
+    // An alternative solution is:
+    // nums[nums.length - 1] = 99;
+
+
+    //////////////////// DIZININ SON DEGERINI YAZDIRMA /////////////////////////////
+    // function getLastValue(array) {
+    //  const lastIndex = array.length - 1;
+    //  return array[lastIndex];
+    // }
+    // console.log(getLastValue([1,23,66,7,90,34]));
+
+
+    //////////////////// İLK DEĞER İLE SON DEĞERİ YER DEĞİŞTİREN FONKSİYON /////////////////////////////
+    /*
+
+    function arraySwap (array) {
+        const lastIndex = array.length - 1;
+        const lastValue = array[lastIndex];
+
+        const firstValue = array[0];
+        array[0] = lastValue;
+        array[lastIndex] = firstValue;
+
+        return array;
+
+    }
+    console.log(arraySwap([1, 20, 22, 24, 5]));
+    console.log(arraySwap(['hello', 'hi', 'good']));
+    
+    */
+    ////////////// counts up by 2 ////////////////////////
+    /*
+    for (var i = 0; i <10; i+=2 ) {
+        console.log(i);
+    }
+
+    /// with while loop;
+
+    let i = 0;
+
+      while (i <= 10) {
+        console.log(i);
+        i += 2;
+      }
+    */
+
+    /////////// counts down from 5 to 0 //////////////////
+    /*
+    for (let i=5; i>=0; i--) {
+         console.log(i);
+    }
+
+    /// with while loop;
+    let i = 5;
+    while (i>=0) {
+        console.log(i);
+        i --;
+    }
+    */
+
+    //////////////// Each number is increased by 1 //////////////////
+    /*
+    const array = [1, 2, 3, 4, 5];
+    const newArray = [];
+
+    for ( let i=0; i<array.length; i++) {
+        newArray.push(array[i] + 1);
+    }
+    console.log(newArray);
+    
+
+    ///////////// with function;
+
+    function addOne (array) {
+        const result = [];
+        for ( let i=0; i<array.length; i++) {
+            result.push(array[i] + 1);
+    }
+    // Güncellenmiş dizinin döndürülmesi için;
+    return result;
+    }
+    console.log(addOne([1,2,3,4,5]));
+    */
+
+    /////////////////// İki parametreleri fonksiyon, Diziye bir değer ekleme ///////////////////////
+    /*
+    function addNum (array, num) {
+        const result = [];
+    for ( let i=0; i<array.length; i++) {
+        result.push(array[i] + num);
+    }
+    return result;
+    }
+    console.log(addNum([1,2,3,4,5],10));
+
+    /////////////////// İki parametreleri fonksiyon, Diziye bir dizi kadar sayı ekleme ///////////////////////
+    function addArrays (array1, array2) {
+        const result = [];
+    for (let i = 0; i < array1.length; i++) {
+        result.push(array1[i] + array2[i]);
+    }
+    return result;
+    }
+    console.log(addArrays([1,2,3,4,5],[6,7,8,9,10]));
+    */
+
+   ////////////////// Pozitif sayıları sayan döngü /////////////////////////
+   /*
+   function countPositive(nums) {
+    let count = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > 0) {
+            count ++;
+        }
+    }
+        return count;
+    }
+   console.log(countPositive([1,-4,-5,6,7,-10,4]));
+   */
+
+   ////////////////////////// MIN-MAX /////////////////////////////
+    /*
+   function minMax(nums) {
+    // minmax: Bu, en küçük (min) ve en büyük (max) değerleri depolayacak bir nesnedir.
+    const minmax = {
+    // Başlangıçta, hem min hem de max özelliği dizinin ilk elemanına eşittir.
+    //Fonksiyon bu başlangıç değerlerini, dizinin diğer elemanlarıyla karşılaştırmak için kullanır.
+    min: nums[0],
+    max: nums[0]
+   };
+
+    for (let i = 0; i < nums.length; i++) {
+        //value: Her bir döngü iterasyonunda, value değişkeni dizinin o anki elemanını alır.
+        const value = nums[i];
+    // Karşılaştırma
+   if (value < minmax.min) {
+    minmax.min = value;
+   }  
+   if (value > minmax.max) {
+    minmax.max = value;
+   }
+
+}
+    // Güncelleme
+    return minmax;
+    }
+    console.log(minMax([3,2,8,9,15]));
+*/
+
+///////////////////////////  COUNT WORDS ///////////////////////////////
+/*
+function countWords (words) {
+    //result: Kelimelerin sayılacağı ve sonuçların saklanacağı boş bir nesne oluşturur.
+    const result = {};
+
+for (let i = 0; i < words.length; i++) {
+    //word: O anki döngüdeki kelimeyi tutar.
+    const word = words[i];
+    //  result nesnesinde word adlı bir anahtar olup olmadığını kontrol eder.
+    //Eğer yoksa (bu kelime ilk kez görülüyorsa), result[word] anahtarını 1 olarak ayarlar.
+    if (!result[word]) { 
+        result[word] = 1;
+        // Eğer result[word] zaten mevcutsa (kelime daha önce görüldüyse), o zaman mevcut değeri 1 arttırır (result[word]++).
+    } else {
+        result[word]++;
+    }
+ }
+ // Sonuç güncelleme
+ return result;
+}
+console.log(countWords(['gözde','gözde','ekrem','hande', 'hande']));
+*/
+
+//////////////////////////// checking value //////////////////////////
+/*
+const array = ['gözde','search','hello','world','search']
+// index değişkeni başlangıçta -1 olarak ayarlandı çünkü aranan eleman bulunamadığı durumda bu değeri döndürmek istiyoruz
+let index = -1;
+for ( let i = 0; i < array.length; i++) {
+
+    if (array[i] === 'search') {
+        index = i;
+        break;
+    }   
+}
+console.log(index);
+words = ['not', 'found'];
+      index = -1;
+
+      for (let i = 0; i < words.length; i++) {
+        if (words[i] === 'search') {
+          index = i;
+          break;
+        }
+      }
+
+      console.log(index);
+*/
+
+/////////////////// FIND INDEX /////////////////////
+/*
+function findIndex (array,word) {
+    let index = -1;
+for (let i = 0; i < array.length; i++) {
+    if (array[i] === word) {
+        index = i;
+        break; // Ancak kelime bulunduğunda döngüyü durdurur
+    }
+}
+ // eğer aranan kelime bulunmadıysa -1 döndürür
+ return index;
+}
+console.log(findIndex(['gozde','hande','ekrem'],'ekrem'));
+*/
+
+//////////////////////////// REMOVE WORDS ////////////////////////////////
+/*
+function removeEgg (foods) {
+    const result = [];
+    for (let i = 0; i < foods.length; i++) {
+        if (foods[i] == 'egg') {
+            continue; // Eğer "egg" kelimesi bulunduysa döngüyü atla
+        } else 
+        result.push(foods[i]) ;
+    }
+    return result;
+}
+console.log(removeEgg(['egg','bread','egg','egg','milk']));
+*/
+
+////////////// Sadece ilk 2 index için 'egg' kaldır ; //////////////////////////7
+/*
+function removeEgg (foods) {
+    const result = [];
+    let eggRemoved = 0;
+    for (let i = 0; i < foods.length; i++) {
+        if (foods[i] == 'egg' && eggRemoved < 2) {
+            eggRemoved ++;
+            continue; // Eğer "egg" kelimesi bulunduysa ve 2 tane kaldırılmışsa döngüyü atla   
+    }
+    result.push(foods[i]) ;
+}
+ return result;
+}
+console.log(removeEgg(['egg','bread','egg','egg','egg','milk']));
+*/
+
+////////// Son 2 indexten kaldır , method ile ; //////////////////
+/*
+function removeEgg (foods) {
+
+    const foodsCopy = foods.slice();
+    const reverseFoods = foods.reverse();
+
+    const result = [];
+    let eggRemoved = 0;
+
+    for (let i = 0; i < foods.length; i++) {
+        if (reverseFoods[i] == 'egg' && eggRemoved < 2) {
+            eggRemoved ++;
+            continue; // Eğer "egg" kelimesi bulunduysa ve 2 tane kaldırılmışsa döngüyü atla
+        }
+        result.push(reverseFoods[i]) ;
+        
+    }
+    return result.reverse() ;
+}
+const foods = ['egg','bread','egg','egg','egg','milk']
+console.log(removeEgg(foods));
+console.log(foods);
+*/
+
+//////////////////////// FIZZ-BUZZ GAME //////////////////////////////
+/*
+for (let i = 0; i <=20; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log('FizzBuzz');
+    } else if (i % 3 === 0) {
+        console.log('Fizz');
+    } else if (i % 5 === 0) {
+        console.log('Buzz');
+    } else {
+        console.log(i);
+    }
+}
+*/
+
+function findIndex (array,word) {
+
+for (let i = 0; i < array.length; i++) {
+    if (array[i] === word) {
+        return i;
+    }
+}
+ // eğer aranan kelime bulunmadıysa -1 döndürür
+ return -1;
+}
+
+function unique (array) {
+    const result = [];
+    for (let i = 0; i < array.length; i++) {
+
+        const word = array[i];
+        if (findIndex(result, word) === -1) {
+            result.push(word);
+          }
+    }
+    return result;
+}
+console.log(unique(['gozde','hande','ekrem','ekrem','ekrem','feruzan']));
+
+
+    </script>
+</body>
+</html>

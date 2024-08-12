@@ -1,0 +1,24 @@
+body {
+    background-color: black;
+}
+.js-result {
+    color: white;
+    font-size: 25px;
+}
+.calculator-button {
+    background-color: rgb(77, 75, 75);
+    color: white;
+    margin: 5px;
+    border: none;
+    border-radius: 50px;
+    /* Tam yuvarlak olması için width ve heigt eşit olması gerekiyor. */
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+}
+.math-button {
+    background-color: orange;
+}
+.clear-button {
+    font-size: 13px;
+}
